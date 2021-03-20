@@ -1,0 +1,132 @@
+#### A24 Palettes 
+
+#PLEASE NOTE THIS IS A WORK IN PROGRESS AND I WILL UPDATE THIS CODE AS I GET AROUND TO WORKING ON IT. RIGHT NOW I HAVE PALLETES FOR LADY BIRD, MIDSOMMAR, MOONLIGHT, The Farewell, HOT SUMMER NIGHTS, AND HEREDITARY. I STRIVED TO MAKE THESE PALLATES COLOR-BLIND FRIENDLY IN THE SENSE THAT THE COLORS ARE MAXIMALLY DISTANT FROM EACH OTHER AS POSSIBLE WHILE MAINTAINING FILM-SPECIFIC AESTHETICS.
+
+#This code assumes you know the basics of data wrangling in RStudio using ggplot2, already. As such, only the information relevant to the creation of the palettes are included. The information for the colors are in hexcode. An example of using these palettes 'in the wild' can be seen at the bottom of the code. 
+
+#What I did here was, using pre-existing code on how to make color pallets, I pulled up iconic scenes from a few A24 movies. I then did my best to match some of the colors using my eyes, and some hexcodes. Which is to say that these colors may not be exactly right, but very close (at least according to my eyes).
+
+#Any quoted sections are taken from: https://data.library.virginia.edu/setting-up-color-palettes-in-r/
+### 
+
+#If you don't have R Color Brewer (RCB) installed already, you will need to do that using: 
+install.packages("RColorBrewer")
+
+#After RCB is installed, you will want to load it into the session using: 
+library(RColorBrewer)
+
+#Even though you might want to create a palette of your own, it never hurts to see what is already available. To view all the palettes included in RCB already
+display.brewer.all()
+
+#Now, the good stuff. 
+
+# "To create a RColorBrewer palette, use the brewer.pal function. It takes two arguments: n, the number of colors in the palette; and name, the name of the palette"
+
+# So, in other words, if I wanted to create a palette that has 12 colors with the name of "Lady In the Water" (I know the ONLY good M. Night Shamala movie is not an A24 film, but this is just an example), the code would look like this: 
+
+brewer.pal(n=12, name="Lady in the Water")
+
+#Note, the number of wanted colors comes first, and the name of the palette comes second. 
+
+brewer.pal(n=8, name="Set2")
+
+brewer.pal(n=8, name="LB1")
+
+
+
+#########
+
+devtools::install_github("EdwinTh/dutchmasters")
+
+devtools::install_github("edwinth/paletti")
+
+library(paletti)
+library(ggplot2)
+
+
+#Lady Bird 
+
+LadyBird<-c(
+  castpink = "#E6399B",
+  vestnavy = "#06266F",
+  pololightblue = "#3F92D2",
+  hairred = "#EC0033",
+  collarolive ="#5FA92A",
+  coattan = "#BF8130",
+  dresspeach ="#FF8673"
+)
+viz_palette(LadyBird)
+
+
+#Midsommer 
+
+Midsommer<-c(
+  collarblue = "#4186D3",
+  stichingred = "#C10016",
+  pyramidyellow = "#FDDA25",
+  stonegray ="#C5CFDA",
+  bearbrown = "#654440",
+  flowerpink = "#EF95CF",
+  helgagreen = "#009739"
+  
+)
+viz_palette(Midsommer)
+
+
+#Moonlight
+
+Moonlight<-c(
+  oceangreen = "#2CD5C4",
+  morningblue = "#005F86",
+  lightbulbpink = "#E45DBF",
+  dineryellow = "#FFBF3F",
+  cornergreen = "#A9C23F",
+  tshirtred = "#EC0033",
+  windbreakerblue = "#3CCBDA"
+)
+  
+viz_palette(Moonlight)
+
+#The Farewell
+
+Farewell<-c(
+  buildingcoral = "#DA6254",
+  buildingblue = "#3CCBDA",
+  weddingtiepink = "#F67599",
+  wallpapergold = "#DAAA00",
+  tshirtheather = "#A6B8C1",
+  pigeongray = "#75787B",
+  nainaishirtbrown = "#A6631B"
+)
+
+viz_palette(Farewell)
+
+
+#Hot Summer Nights 
+
+HSN<- c(
+  lollipopred = "#E4002B",
+  denimblue = "#69B3E7",
+  bathroomblue = "#6BA4B8",
+  youknowgreen = "#4C8D2B",
+  youknoweggshell = "#E4D5D3",
+  nostalgiapink = "#E45DBF", 
+  hurricanegray = "#2E3350"
+)
+
+viz_palette(HSN)
+
+
+#Hereditary 
+
+Hereditary <- c(
+  demongold = "#F0B323",
+  browniebrown = "#7D4016",
+  burningdadorange = "#FF8200",
+  wirered = "#7C2629",
+  pigeongray = "#75787B",
+  bandagebeige = "#E3A184",
+  funeralblack = "#1D252D"
+)
+  
+viz_palette(Hereditary)
