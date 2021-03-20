@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @mjchampagne
 :D 
 - 👀 I’m interested in ...
-Adacemically/Professionally: Sociolinguistics, sociophonetics, language variation and change, linguistic anthropology, socio-psycholinguistics, user research
+Academically/Professionally: Sociolinguistics, sociophonetics, language variation and change, linguistic anthropology, socio-psycholinguistics, user research
 Personally: Creating color palates, accessibility in data vizualization 
 - 🌱 I’m currently learning ...
 Python
